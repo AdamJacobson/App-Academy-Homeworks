@@ -1,4 +1,6 @@
-require_relative 'stack'
+require_relative '../stack'
+
+# run with bundle exec rspec spec/file
 
 describe Stack do
   subject(:stack) { Stack.new }
