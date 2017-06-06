@@ -44,7 +44,7 @@ class Mancala
   end
 
   def won?
-     @board.one_side_empty?
+    @board.one_side_empty?
   end
 
   def winner_message
@@ -61,4 +61,8 @@ class Mancala
     puts "12  11  10   9   8   7"
     puts " 1   2   3   4   5   6"
   end
+end
+
+if __FILE__ == $PROGRAM_NAME
+  Mancala.new("Adam", "Anne").play
 end
