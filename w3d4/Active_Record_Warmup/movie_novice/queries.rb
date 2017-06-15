@@ -46,7 +46,7 @@ def below_average_years
   Movie.select("yr, count(id) AS bad_movies")
        .where("score < 5")
        .group("yr")
-       .order("count(id)")
+       .order("bad_movies DESC")
 
   # <<-SQL
   # SELECT yr, count(id) AS bad_movies
@@ -63,7 +63,7 @@ def alphabetized_actors
   # are alphabetized differently than the specs.
   # This spec might fail for Ubuntu users. It's ok!
 
-  Actor.select("id, name").order("name").limit(10)
+  Actor.order("name ASC").limit(10)
 
   # <<-SQL
   #   SELECT name
