@@ -13,6 +13,7 @@
           <li><a href="#description">Description</a></li>
           <li><a href="#ingredients">Ingredients</a></li>
           <li><a href="#directions">Directions</a></li>
+          <li><a href="#add_review">Add a Review</a></li>
         </ul>
       </nav>
     </header>
@@ -58,6 +59,46 @@
         <li>Heat oil in a large skillet over medium-low heat. Add onion and bell pepper. Cook gently until very soft, about 20 minutes. Add garlic and cook until tender, 1 to 2 minutes; stir in cumin, paprika and cayenne, and cook 1 minute. Pour in tomatoes and season with 3/4 teaspoon salt and 1/4 teaspoon pepper; simmer until tomatoes have thickened, about 10 minutes. Stir in crumbled feta.</li>
         <li>Gently crack eggs into skillet over tomatoes. Season with salt and pepper. Transfer skillet to oven and bake until eggs are just set, 7 to 10 minutes. Sprinkle with cilantro and serve with hot sauce.</li>
       </ol>
+
+    </section>
+
+    <section>
+      <h3>Review This Recipe</h3>
+      <a name="add_review"/>
+      <form action="/reviews" method="post">
+        <label for="reviewer">Reviewer Name</label>
+        <input id="reviewer" type="text" name="review[name]" placeholder="john smith">
+
+        <br>
+
+        <label for="rating">Rating</label>
+        1: <input type="radio" name="review[rating]" value="1">
+        2: <input type="radio" name="review[rating]" value="2">
+        3: <input type="radio" name="review[rating]" value="3" checked>
+        4: <input type="radio" name="review[rating]" value="4">
+        5: <input type="radio" name="review[rating]" value="5">
+      </form>
+
+      <br>
+
+      <label for="expertise">How often do you cook?</label>
+      <select id="expertise" name="review[expertise]">
+        <option selected disabled>-- Please Select --</option>
+        <option value="1">Cook Sometimes</option>
+        <option value="2">Cook Everyday</option>
+        <option value="3">Cook as a Hobby</option>
+        <option value="4">Cook Profressionaly</option>
+      </select>
+
+      <br>
+
+      <label for="review">
+        <textarea id="review" name="review[text]" rows="8" cols="80" placeholder="Text for the review"></textarea>
+      </label>
+
+      <br>
+
+      <input type="submit" value="Submit">
 
     </section>
 
