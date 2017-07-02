@@ -5,7 +5,9 @@
     <title>Kevin McCall Recipe</title>
     <meta name="description" content="Recipe for Shakshuka. Shakshuka is a middle-eastern dish.">
 
-    <link rel="stylesheet" href="css_reset.css">
+    <!-- <link rel="stylesheet" href="css_reset.css"> -->
+    <link rel="stylesheet" href="css_custom_reset.css">
+    <link rel="stylesheet" href="my_css.css">
     <script type="text/javascript" src="external_javascript_example.js"/>
 
     <script>
@@ -35,7 +37,7 @@
     <aside class="">
       <a name="ingredients"/>
       <h2>Ingredients</h2>
-      <ul>
+      <ul class="ingredients-list">
         <li>3 tablespoons extra-virgin olive oil</li>
         <li>1 large onion, halved and thinly sliced</li>
         <li>1 large red bell pepper, seeded and thinly sliced</li>
@@ -77,6 +79,12 @@
     </section>
 
     <section id="reviews">
+      <article class="review">
+        Is Good
+      </article>
+    </section>
+
+    <section id="add-review">
       <h3>Review This Recipe</h3>
       <a name="add_review"/>
       <form id="review-form" action="/reviews" method="post">
