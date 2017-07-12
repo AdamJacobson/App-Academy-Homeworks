@@ -25,7 +25,7 @@ class Widget extends React.Component {
         // use the action creator 'selectCurrency' to build the object to
         // be dispatched
         this.props.store.dispatch(
-          this.selectCurrency(resp.base, resp.rates)
+          this.selectCurrency(resp.base, resp.rates) // creates an action
         );
       }.bind(this)
     });
@@ -38,7 +38,7 @@ class Widget extends React.Component {
     const { rates, baseCurrency } = this.props.store.getState();
 
     const currencyOptions = this.currencies.map( (currency) => (
-        <div onClick={ () => { this.fetchRates(currency) }}
+        <div onClick={ () => this.fetchRates(currency) }
              key={currency}
              className="currency-option">
           {currency}
@@ -69,7 +69,7 @@ class Widget extends React.Component {
       </div>
     );
   }
-};
+}
 
 
 export default Widget;
